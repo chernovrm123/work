@@ -1,0 +1,30 @@
+{{define "layout"}}<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{block "title" .}}Учёт трат{{end}}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    
+      <a class="logo" href="/">Учёт трат</a>
+      <nav>
+        <a href="/expenses">Траты</a>
+        <a href="/expenses/new">Добавить</a>
+        <a href="/about">О проекте</a>
+      </nav>
+    
+  </header>
+
+  <main>
+    {{block "content" .}}{{end}}
+  </main>
+
+  <footer>
+    Учебный проект на Go
+  </footer>
+</body>
+</html>
+{{end}}
